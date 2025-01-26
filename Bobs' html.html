@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Alert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      animation: flicker 3s infinite;
+    }
+    h1 {
+      font-size: 3rem;
+      color: red;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px darkred;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      color: #ccc;
+    }
+    .warning {
+      color: yellow;
+      font-size: 1.5rem;
+      animation: blink 1s infinite;
+    }
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 10px red, 0 0 20px darkred, 0 0 30px darkred, 0 0 40px red;
+      }
+      20%, 24%, 55% {
+        text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red;
+      }
+    }
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: white;
+      background: red;
+      border: 2px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      background: darkred;
+      color: yellow;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <h1>Come out</h1>
+      <p class="warning">I am right outside your house</p>
+      <p>Look here!</p>
+      <!-- Image -->
+      <img src="path-to-image.jpg" alt="Your house!">
+      <!-- Link -->
+      <a href="mailto:support@example.com" class="button">U can even get the link here!!!</a>
+    </div>
+  </body>
+</html>
